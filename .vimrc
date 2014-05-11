@@ -1,34 +1,39 @@
+" Vundle "
 set nocompatible              " be iMproved, required
 filetype off                  " required
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-filetype plugin on
+Plugin 'gmarik/Vundle.vim'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'gmarik/vundle'
+Plugin 'tpope/vim-fugitive'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'tpope/vim-rails.git'
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'L9'
+Plugin 'FuzzyFinder'
+Plugin 'kien/ctrlp.vim'
+Plugin 'jwhitley/vim-colors-solarized'
+Plugin 'tomasr/molokai'
+Plugin 'jnurmine/Zenburn'
+Plugin 'vim-voom/VOoM'
+Plugin 'lukaszkorecki/workflowish'
+Plugin 'Lokaltog/vim-distinguished'
+Plugin 'LaTeX-Box-Team/LaTeX-Box'
+Plugin 'scrooloose/nerdtree'
+Plugin 'bling/vim-airline'
+Plugin 'vim-scripts/asm8051.vim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+
+call vundle#end()
+filetype plugin indent on     " required
+
 set omnifunc=syntaxcomplete#Complete
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'tpope/vim-rails.git'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-Bundle 'git://git.wincent.com/command-t.git'
-Bundle 'altercation/vim-colors-solarized.git'
-Bundle 'tomasr/molokai'
-Bundle 'jnurmine/Zenburn'
-Bundle 'vim-voom/VOoM'
-Bundle 'lukaszkorecki/workflowish'
-Bundle 'Lokaltog/vim-distinguished'
-Bundle 'LaTeX-Box-Team/LaTeX-Box'
-Bundle 'scrooloose/nerdtree'
-Bundle 'bling/vim-airline'
-Bundle 'vim-scripts/asm8051.vim'
-
-
-filetype plugin indent on     " required
 set autoread
 set nobackup
 set nowb
@@ -73,7 +78,19 @@ set t_Co=256
 set wildignore=*.o,*~,*.pyc
 
 xnoremap <space>c :!octave --silent \| cut -c8-<cr>
-xnoremap <space>p :!python <cr> 
+xnoremap <space>p :!python <cr>
+nnoremap <space><space><space><space><space> :setlocal spell spelllang=en_us<cr>
+
+" SETTINGS for CTRLP "
+let g:ctrlp_map = '<Leader>t'
+
+
+" SETTINGS for Ultisnips "
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "mycoolsnippets"]
+
 
 " SETTINGS for LATEX-BOX "
 let g:LatexBox_latexmk_async=0
@@ -81,9 +98,5 @@ let g:LatexBox_latexmk_preview_continuously=1
 let g:LatexBox_quickfix=2
 
 " SETTINGS for Airline "
-let g:airline_powerline_fonts = 0
 let g:airline#extensions#tabline#fnamemod = ':t:.'
 let g:airline#extensions#tabline#enabled = 0
-
-
-nnoremap <space><space><space><space><space> :setlocal spell spelllang=en_us<cr>
