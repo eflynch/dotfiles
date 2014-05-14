@@ -28,4 +28,4 @@ URxvt.cursorUnderline:      false
 
 URxvt.pointerBlank:         true
 
-# include "/home/eflynch-local/.Xthemes/solarized"
+# include "/home/eflynch/.Xthemes/solarized"

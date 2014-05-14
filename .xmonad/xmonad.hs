@@ -39,9 +39,9 @@ import XMonad.Layout.NoBorders (smartBorders, noBorders)
 import XMonad.Layout.LayoutHints
 import XMonad.Layout.LayoutModifier
 
-myXmonadBar = "dzen2 -fn '-*-fixed-medium-r-*-*-12-*-*-*-*-*-iso8859-*' -x '0' -y '0' -w '640' -ta 'l' -fg '#FFFFFF' -bg '#000000'" 
-myStatusBar = "conky -c ~/.xmonad/.conky_dzen | dzen2 -fn '-*-fixed-medium-r-*-*-12-*-*-*-*-*-iso8859-*' -x '1080' -y '0' -w '600' -ta 'r' -bg '#000000'"
-myBitmapsDir = "/home/eflynch-local/.xmonad/dzen2"
+myXmonadBar = "dzen2 -fn 'xft:Inconsolata:size=8:antialias=true' -x '0' -y '0' -h '14' -w '640' -ta 'l' -fg '#FFFFFF' -bg '#000000'"
+myStatusBar = "conky -c /home/eflynch/.xmonad/.conky_dzen | dzen2 -fn 'Monospace:size=8:antialias=true' -x '1080' -y '0' -w '600' -h '14' -ta 'r' -bg '#000000'"
+myBitmapsDir = "/home/eflynch/.xmonad/dzen2"
 
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.

@@ -4,4 +4,4 @@ out_to_x no
 update_interval 1.0
 
 TEXT
-^i(/home/eflynch-local/.xmonad/dzen2/up.xbm) ${upspeed eth0} ^i(/home/eflynch-local/.xmonad/dzen2/down.xbm) ${downspeed eth0} ^i(/home/eflynch-local/.xmonad/dzen2/cpu.xbm) $cpu% ^i(/home/eflynch-local/.xmonad/dzen2/mem.xbm) ($memperc%) ^i(/home/eflynch-local/.xmonad/dzen2/hdd.xbm) ${fs_used /}  ^i(/home/eflynch-local/.xmonad/dzen2/clock.xbm) ${time %H:%M:%S%P}   
+^i(/home/eflynch/.xmonad/dzen2/up.xbm) ${upspeed eth0} ^i(/home/eflynch/.xmonad/dzen2/down.xbm) ${downspeed eth0} ^i(/home/eflynch/.xmonad/dzen2/cpu.xbm) $cpu% ^i(/home/eflynch/.xmonad/dzen2/mem.xbm) ($memperc%) ^i(/home/eflynch/.xmonad/dzen2/hdd.xbm) ${fs_used /}  ^i(/home/eflynch/.xmonad/dzen2/clock.xbm) ${time %H:%M:%S%P}   
