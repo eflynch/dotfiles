@@ -22,9 +22,11 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin 'vim-scripts/asm8051.vim'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'davidhalter/jedi-vim'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'hdima/python-syntax'
 
 call vundle#end()
 filetype plugin indent on     " required
@@ -39,7 +41,7 @@ set noswapfile
 syntax enable
 set background=dark
 "colorscheme molokai
-colorscheme solarized
+"colorscheme solarized
 " colorscheme zenburn
 "colorscheme distinguished
 
