@@ -23,6 +23,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'hdima/python-syntax'
+Plugin 'digitaltoad/vim-jade'
 
 call vundle#end()
 filetype plugin indent on     " required
