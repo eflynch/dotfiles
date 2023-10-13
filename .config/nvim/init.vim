@@ -4,9 +4,17 @@ Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'jxnblk/vim-mdx-js'
 Plug 'dag/vim-fish'
+Plug 'junegunn/goyo.vim'
+Plug 'http://framagit.org/tyreunom/coquille'
+Plug 'jceb/vim-orgmode'
+
 
 call plug#end()
+nnoremap <space>s :setlocal spell spelllang=en_us<cr>
+nnoremap <space>c :pu!=strftime('%c')<cr>
+nnoremap <space>g g?i[
 
+syntax on
 filetype plugin indent on
 " show existing tab with 4 spaces width
 set tabstop=4
@@ -28,3 +36,5 @@ imap <c-x><c-l> <plug>(fzf-complete-line)
 
 " Advanced customization using autoload functions
 inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
+
+set runtimepath+=~/.config/nvim/bundle/coquille

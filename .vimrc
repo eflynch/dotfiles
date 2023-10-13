@@ -1,50 +1,35 @@
-set autoread
-set nobackup
-set nowb
-set noswapfile
-
-syntax enable
-set background=dark
-"colorscheme molokai
-colorscheme solarized
-" colorscheme zenburn
-"colorscheme distinguished
-
-
-set so=7
-set expandtab
-set smarttab
-set shiftwidth=4
-set tabstop=4
-set lbr
-set tw=500
-set ai
-set si
-set wrap
-set wildmenu
-
-set encoding=utf8
-set magic
-set incsearch
-set ignorecase
-set smartcase
-set showmatch
-set mat=2
-
-set noerrorbells
-set novisualbell
-set t_vb=
-set t_ut=
-set t_Co=256
-
-set wildignore=*.o,*~,*.pyc
-
-
+call plug#begin('~/.vim/plugged')
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'jxnblk/vim-mdx-js'
+Plug 'dag/vim-fish'
+Plug 'junegunn/goyo.vim'
+Plug 'whonore/coqtail'
+Plug 'jceb/vim-orgmode'
+call plug#end()
 nnoremap <space>s :setlocal spell spelllang=en_us<cr>
 nnoremap <space>c :pu!=strftime('%c')<cr>
 nnoremap <space>g g?i[
 
-call plug#begin('~/.vim/plugged')
-Plug 'junegunn/goyo.vim'
-call plug#end()
+syntax on
+filetype plugin indent on
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
 
+" Mapping selecting mappings
+nmap <leader><tab> <plug>(fzf-maps-n)
+xmap <leader><tab> <plug>(fzf-maps-x)
+omap <leader><tab> <plug>(fzf-maps-o)
+
+" Insert mode completion
+imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-j> <plug>(fzf-complete-file-ag)
+imap <c-x><c-l> <plug>(fzf-complete-line)
+
+" Advanced customization using autoload functions
+inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
